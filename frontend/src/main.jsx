@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BookOpen, LoaderCircle, Plus, Search, Trash2, X } from "lucide-react";
 import "./styles.css";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const API_URL = import.meta.env.VITE_API_URL || "";
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -127,7 +127,7 @@ function App() {
         <div className="section-heading"><div><p className="eyebrow">The collection</p><h2>{query ? "Matching books" : "Recently catalogued"}</h2></div><span>{filteredBooks.length} shown</span></div>
         {loading ? <div className="empty-state"><LoaderCircle className="spin" size={25} /><p>Opening the collection...</p></div> : filteredBooks.length === 0 ? <div className="empty-state"><BookOpen size={28} /><p>{error ? "Start the API to load your books." : "No books match your search."}</p></div> : <div className="book-grid">{filteredBooks.map((book) => <article className="book-card" key={book.id}><div className="book-number">{String(book.id).padStart(2, "0")}</div><div className="book-card-content"><h3>{book.title}</h3><p className="authors">{book.authors.map((author) => `${author.fname} ${author.lname}`).join(", ")}</p><p className="year">Published {book.publishedAt}</p></div><button className="delete-button" onClick={() => deleteBook(book.id)} aria-label={`Delete ${book.title}`}><Trash2 size={17} /></button></article>)}</div>}
       </section>
-      <footer>Smart Library <span>•</span> Connected to {API_URL}</footer>
+      <footer>Smart Library</footer>
     </main>
   );
 }
