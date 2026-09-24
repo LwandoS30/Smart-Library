@@ -1,0 +1,51 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "fname": "Chinua",
+      "lname": "Achebe"
+    },
+    {
+      "id": 2,
+      "fname": "James",
+      "lname": "Frey"
+    },
+    {
+      "id": 3,
+      "fname": "Jobie",
+      "lname": "Hughes"
+    },
+    {
+      "id": 4,
+      "fname": "Witness K",
+      "lname": "Tamsanqa"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Things Fall Apart",
+      "publishedAt": "1958",
+      "authorIds": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "title": "I am Number Four",
+      "publishedAt": "2010",
+      "authorIds": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Nyana wam! Nyana wam!",
+      "publishedAt": "2008",
+      "authorIds": [
+        4
+      ]
+    }
+  ]
+}
